@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortes de Pelo - LS Barber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* Estilos para la galería de cortes */
+.galeria-cortes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Espacio entre los elementos */
+    margin: 40px auto; /* Espacio en la parte superior e inferior */
+    padding: 20px;
+}
+
+.corte {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.corte:hover {
+    transform: scale(1.05);
+}
+
+.corte img {
+    width: 100%;
+    height: 200px; /* Ajusta según sea necesario */
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.corte p {
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center; /* Alinea el texto en el centro */
+}
+
+</style>
+
+<body>
+    <header>
+        <h1>Cortes de Pelo en LS Barber</h1>
+        <nav>
+            <nav>
+                <ul>
+                    <li><a href="reseñas.html">Reseñas</a></li>
+                    <li><a href="reservas.html">Reservar Turno</a></li>
+                </ul>
+            </nav>
+            
+    </header>
+
+    <section id="galeria">
+        <h2>Cortes de Pelo</h2>
+        <div class="galeria-cortes">
+            <div class="corte">
+                <img src="corte1.jpg" alt="Corte Clásico">
+                <p>Corte Clásico</p>
+            </div>
+            <div class="corte">
+                <img src="corte2.jpg" alt="Corte Moderno">
+                <p>Corte Moderno</p>
+            </div>
+            <div class="corte">
+                <img src="corte3.jpg" alt="Corte de Estilo Libre">
+                <p>Corte de Estilo Libre</p>
+            </div>
+            <div class="corte">
+                <img src="corte4.jpg" alt="Corte con Barba">
+                <p>Corte con Barba</p>
+            </div>
+            <div class="corte">
+                <img src="corte5.jpg" alt="Corte Militar">
+                <p>Corte Militar</p>
+            </div>
+            <div class="corte">
+                <img src="corte6.jpg" alt="Corte de Cabello Largo">
+                <p>Corte de Cabello Largo</p>
+            </div>
+            <!-- Agrega más cortes según sea necesario -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LS Barber. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

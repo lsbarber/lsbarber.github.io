@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva un Turno - LS Barber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<script>
+    document.getElementById("form-reserva").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const barbero = document.getElementById("barbero").value;
+    const fecha = document.getElementById("fecha").value;
+    const hora = document.getElementById("hora").value;
+
+    const mensaje = `Reserva confirmada para ${nombre} con ${barbero} el ${fecha} a las ${hora}.`;
+    
+    document.getElementById("mensaje-reserva").innerHTML = `<p>${mensaje}</p>`;
+    
+    // Aquí puedes agregar una funcionalidad para enviar esta información a un servidor si fuera necesario.
+});
+
+</script>
+
+<style>
+    /* Estilos para el formulario de reserva */
+#reserva {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#reserva h2 {
+    text-align: center;
+}
+
+#form-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-reserva label {
+    font-size: 1.1rem;
+}
+
+#form-reserva input, #form-reserva select, #form-reserva button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#form-reserva button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-reserva button:hover {
+    background-color: #555;
+}
+
+#mensaje-reserva {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: green;
+}
+
+</style>
+
+<body>
+    <header>
+        <h1>Reserva tu Turno en LS Barber</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cortes.html">Cortes de Pelo</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="reserva">
+        <h2>Reserva tu Turno</h2>
+        <form id="form-reserva">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="barbero">Selecciona el Barbero:</label>
+            <select id="barbero" name="barbero" required>
+                <option value="Juan Pérez">(nombre)</option>
+                <option value="María López">(nombre)</option>
+            </select>
+
+            <label for="fecha">Fecha de la Reserva:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora de la Reserva:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <button type="submit">Reservar Turno</button>
+        </form>
+
+        <div id="mensaje-reserva"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LS Barber. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
